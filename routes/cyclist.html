@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bike Adventure</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="/socket.io/socket.io.js"></script><!-- This file does not actually exist but this reference is required -->
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.js"></script>
+   <script src="js/libs/isotope.js"></script>
+    <link rel="stylesheet" href="css/libs/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+
+    <!-- Notifications -->
+    <div id="message" class="hide-start"></div>
+
+
+    <div class="container-fluid">
+
+
+      <!-- Login -->
+      <div class="row" id="welcome">
+        <div class="col-lg-4 col-lg-offset-4">
+          <h1>Get a towel!</h1>
+          <form role="form">
+            <div class="form-group">
+              <label for="name">Enter your name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <input type="button" class="btn btn-submit" id="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <!-- Total Timer -->
+      <div class="row hide-start">
+        <div class="col-sm-4 col-sm-offset-4">
+          <h4>Total Time</h4>
+          <div class="total-time"></div>
+        </div>
+      </div>
+
+      <!-- Interval timers -->
+      <div class="row hide-start">
+        <div class="col-sm-4 col-sm-offset-4">
+          <h4>Interval Time</h4>
+          <div class="interval-time"></div>
+        </div>
+        <div class="col-sm-4">
+          <h4>Current Interval</h4>
+          <div class="interval"></div>
+        </div>
+      </div>
+
+      <div class="row controls">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          Interval Controls
+          <div class="row" data-type="interval">
+            <div class="col-md-4 col-sm-12">
+              <div class="btn" data-type="start">Start Interval</div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="btn" data-type="rest">Rest Interval</div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="btn" data-type="clear">Clear Interval</div>
+            </div>
+          </div>
+          Time Controls
+          <div class="row" data-type="time">
+            <div class="col-md-4 col-sm-12">
+              <div class="btn" data-type="start">Start</div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="btn" data-type="stop">Stop</div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="btn btn-half" data-type="resume">Resume</div>
+              <div class="btn btn-half" data-type="reset">Reset</div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Rider List -->
+    <div class="row hide-start riders">
+      <div class="col-sm-4 col-sm-offset-4">
+        <h4>Riders</h4>
+        <ul id="ranking-list"></ul>
+      </div>
+    </div>
+
+
+  </div>
+  <script src="js/ip.js"></script>
+	<script src="js/cyclist.js"></script>
+  </body>
+</html>
