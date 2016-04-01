@@ -10,7 +10,7 @@ var tmpDir = appName;
 plan.target('staging', [
   {
     host: '159.203.28.164',
-    username: username,
+    username: kittens,
     password: 'simon123',
     agent: process.env.SSH_AUTH_SOCK
   }
@@ -19,7 +19,7 @@ plan.target('staging', [
 plan.target('production', [
   {
     host: '159.203.28.164',
-    username: username,
+    username: kittens,
     password: 'simon123',
     agent: process.env.SSH_AUTH_SOCK
   },
